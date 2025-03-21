@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Order Request</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            padding: 20px;
+            color: #333333;
+        }
+        .footer {
+            text-align: center;
+            color: #888888;
+            padding: 20px;
+            font-size: 12px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 14px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Item Order Request</h1>
+        </div>
+        <div class="content">
+            <p>Dear <%= supplierName %>,</p>
+            <p>We are writing to request an order for the following item:</p>
+            <ul>
+                <li><strong>Item Name:</strong> <%= itemName %></li>
+                <li><strong>Quantity Needed:</strong> <%= quantity %></li>
+            </ul>
+            <p>Please confirm the availability and expected delivery date as soon as possible.</p>
+            <a href="mailto:<%= email %>" class="btn">Reply to this Request</a>
+        </div>
+        <div class="footer">
+            <p>If you have any questions, please contact our purchasing department.</p>
+            <p>This is an automated message, please do not reply to this email.</p>
+        </div>
+    </div>
+</body>
+</html>
